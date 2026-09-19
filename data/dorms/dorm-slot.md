@@ -1,13 +1,13 @@
 ---
-doc_id: "dorm-slot"
-title: "Bố trí chỗ ở nội trú cho sinh viên khóa 2025 PTIT tại Hà Nội"
-source_url: "https://ptit.edu.vn/thong-bao-ve-viec-bo-tri-sinh-vien-khoa-2025-noi-tru-o-cac-ky-tuc-xa-tai-co-so-dao-tao-ha-noi/"
-retrieved_at: "2026-09-19"
-document_version: "2025-08-26"
-audience: "student"
-department: "student-dormitory"
-category: "dormitory-registration"
-language: "vi"
+doc_id: dorm-slot
+title: Bố trí chỗ ở nội trú cho sinh viên khóa 2025 PTIT tại Hà Nội
+source_url: https://ptit.edu.vn/thong-bao-ve-viec-bo-tri-sinh-vien-khoa-2025-noi-tru-o-cac-ky-tuc-xa-tai-co-so-dao-tao-ha-noi/
+retrieved_at: 2026-09-19
+document_version: 2025-08-26
+audience: student
+department: student-dormitory
+category: dormitory-registration
+language: vi
 ---
 
 # Bố trí chỗ ở nội trú cho sinh viên khóa 2025 PTIT tại Hà Nội

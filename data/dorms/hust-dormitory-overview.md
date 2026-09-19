@@ -1,13 +1,13 @@
 ---
-doc_id: "hust-dormitory-overview"
-title: "Ký túc xá Đại học Bách khoa Hà Nội"
-source_url: "https://hust.edu.vn/vi/sinh-vien/sinh-vien-hien-tai/ky-tuc-xa-51010.html"
-retrieved_at: "2026-09-19"
-document_version: "2016-07-10"
-audience: "student"
-department: "student-support"
-category: "dormitory-overview"
-language: "vi"
+doc_id: hust-dormitory-overview
+title: Ký túc xá Đại học Bách khoa Hà Nội
+source_url: https://hust.edu.vn/vi/sinh-vien/sinh-vien-hien-tai/ky-tuc-xa-51010.html
+retrieved_at: 2026-09-19
+document_version: 2016-07-10
+audience: student
+department: student-support
+category: dormitory-overview
+language: vi
 ---
 
 # Ký túc xá Đại học Bách khoa Hà Nội

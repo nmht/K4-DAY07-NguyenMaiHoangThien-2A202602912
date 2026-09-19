@@ -1,13 +1,13 @@
 ---
-doc_id: "dorm-registration"
-title: "Hướng dẫn đăng ký ở nội trú HUCE học kỳ I năm học 2026-2027"
-source_url: "https://ktx.huce.edu.vn/ban-quan-ly-ky-tuc-xa-huong-dan-dk-o-noi-tru-hoc-ky-i-nam-hoc-2026-2027"
-retrieved_at: "2026-09-19"
-document_version: "2026-08-17"
-audience: "student"
-department: "dormitory-management"
-category: "dormitory-registration"
-language: "vi"
+doc_id: dorm-registration
+title: Hướng dẫn đăng ký ở nội trú HUCE học kỳ I năm học 2026-2027
+source_url: https://ktx.huce.edu.vn/ban-quan-ly-ky-tuc-xa-huong-dan-dk-o-noi-tru-hoc-ky-i-nam-hoc-2026-2027
+retrieved_at: 2026-09-19
+document_version: 2026-08-17
+audience: student
+department: dormitory-management
+category: dormitory-registration
+language: vi
 ---
 
 # Hướng dẫn đăng ký ở nội trú HUCE học kỳ I năm học 2026-2027

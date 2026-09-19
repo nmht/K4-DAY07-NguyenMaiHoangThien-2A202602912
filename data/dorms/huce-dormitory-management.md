@@ -1,13 +1,13 @@
 ---
-doc_id: "huce-dormitory-management"
-title: "Ban quản lý Ký túc xá Đại học Xây dựng Hà Nội"
-source_url: "https://ktx.huce.edu.vn/"
-retrieved_at: "2026-09-19"
-document_version: "not-stated"
-audience: "all"
-department: "dormitory-management"
-category: "dormitory-overview"
-language: "vi"
+doc_id: huce-dormitory-management
+title: Ban quản lý Ký túc xá Đại học Xây dựng Hà Nội
+source_url: https://ktx.huce.edu.vn/
+retrieved_at: 2026-09-19
+document_version: not-stated
+audience: all
+department: dormitory-management
+category: dormitory-overview
+language: vi
 ---
 
 # Ban quản lý Ký túc xá Đại học Xây dựng Hà Nội

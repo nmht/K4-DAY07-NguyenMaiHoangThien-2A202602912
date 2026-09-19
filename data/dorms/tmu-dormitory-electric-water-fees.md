@@ -1,13 +1,13 @@
 ---
-doc_id: "tmu-dormitory-electric-water-fees"
-title: "Điều chỉnh mức giá điện nước tại Khu nội trú sinh viên"
-source_url: "https://kntsv.tmu.edu.vn/van-ban-quan-ly/dieu-chinh-muc-gia-dien-nuoc-tai-khu-noi-tru-sinh-vien-1429"
-retrieved_at: "2026-09-19"
-document_version: "2024-08-05"
-audience: "student"
-department: "student-dormitory"
-category: "dormitory-fees"
-language: "vi"
+doc_id: tmu-dormitory-electric-water-fees
+title: Điều chỉnh mức giá điện nước tại Khu nội trú sinh viên
+source_url: https://kntsv.tmu.edu.vn/van-ban-quan-ly/dieu-chinh-muc-gia-dien-nuoc-tai-khu-noi-tru-sinh-vien-1429
+retrieved_at: 2026-09-19
+document_version: 2024-08-05
+audience: student
+department: student-dormitory
+category: dormitory-fees
+language: vi
 ---
 
 # Điều chỉnh mức giá điện nước tại Khu nội trú sinh viên

@@ -1,13 +1,13 @@
 ---
-doc_id: "tmu-dormitory-registration-hanoi"
-title: "Cách thức đăng ký ở Ký túc xá cơ sở Hà Nội"
-source_url: "https://kntsv.tmu.edu.vn/tin-tuc/chi-tiet/cach-thuc-dang-ky-o-ky-tuc-xa-co-so-ha-noi-23232"
-retrieved_at: "2026-09-19"
-document_version: "2023-08-25"
-audience: "student"
-department: "student-dormitory"
-category: "dormitory-registration"
-language: "vi"
+doc_id: tmu-dormitory-registration-hanoi
+title: Cách thức đăng ký ở Ký túc xá cơ sở Hà Nội
+source_url: https://kntsv.tmu.edu.vn/tin-tuc/chi-tiet/cach-thuc-dang-ky-o-ky-tuc-xa-co-so-ha-noi-23232
+retrieved_at: 2026-09-19
+document_version: 2023-08-25
+audience: student
+department: student-dormitory
+category: dormitory-registration
+language: vi
 ---
 
 # Cách thức đăng ký ở Ký túc xá cơ sở Hà Nội

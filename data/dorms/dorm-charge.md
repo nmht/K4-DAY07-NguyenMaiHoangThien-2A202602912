@@ -1,13 +1,13 @@
 ---
-doc_id: "dorm-charge"
-title: "Mức thu ký túc xá PTIT cơ sở miền Bắc năm 2024-2025"
-source_url: "https://ptit.edu.vn/thong-bao-quyet-dinh-ban-hanh-muc-thu-ky-tuc-xa-tai-co-so-mien-bac-nam-2024-2025/"
-retrieved_at: "2026-09-19"
-document_version: "2024-08-23"
-audience: "student"
-department: "student-dormitory"
-category: "dormitory-fees"
-language: "vi"
+doc_id: dorm-charge
+title: Mức thu ký túc xá PTIT cơ sở miền Bắc năm 2024-2025
+source_url: https://ptit.edu.vn/thong-bao-quyet-dinh-ban-hanh-muc-thu-ky-tuc-xa-tai-co-so-mien-bac-nam-2024-2025/
+retrieved_at: 2026-09-19
+document_version: 2024-08-23
+audience: student
+department: student-dormitory
+category: dormitory-fees
+language: vi
 ---
 
 # Mức thu ký túc xá PTIT cơ sở miền Bắc năm 2024-2025

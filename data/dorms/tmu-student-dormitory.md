@@ -1,13 +1,13 @@
 ---
-doc_id: "tmu-student-dormitory"
-title: "Khu Nội trú sinh viên Trường Đại học Thương mại"
-source_url: "https://kntsv.tmu.edu.vn/"
-retrieved_at: "2026-09-19"
-document_version: "not-stated"
-audience: "all"
-department: "student-dormitory"
-category: "dormitory-overview"
-language: "vi"
+doc_id: tmu-student-dormitory
+title: Khu Nội trú sinh viên Trường Đại học Thương mại
+source_url: https://kntsv.tmu.edu.vn/
+retrieved_at: 2026-09-19
+document_version: not-stated
+audience: all
+department: student-dormitory
+category: dormitory-overview
+language: vi
 ---
 
 # Khu Nội trú sinh viên Trường Đại học Thương mại
