@@ -1,8 +1,8 @@
 # Báo Cáo Nhóm — Lab 7: Embedding & Vector Store
 
-**Nhóm:** [Tên nhóm]
-**Thành viên:** [Họ tên từng thành viên]
-**Ngày:** [Ngày nộp]
+**Nhóm:** Nhóm 38
+**Thành viên:** Nguyễn Mai Hoàng Thiện
+**Ngày:** 19/9/2026
 
 > **Nộp 1 bản / nhóm.** Phần cá nhân (hướng tiếp cận, kết quả riêng, dự đoán…) mỗi thành viên nộp riêng trong `REPORT_CANHAN.md`. Chi tiết thang điểm: `docs/SCORING.md`.
 
