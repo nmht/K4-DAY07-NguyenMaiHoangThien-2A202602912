@@ -105,17 +105,17 @@ tests/test_solution.py::TestEmbeddingStoreDeleteDocument::test_delete_returns_tr
 
 ## 4. Dự đoán độ tương tự (Similarity Predictions) — Cá nhân (5 điểm)
 
-| Cặp | Câu A | Câu B | Dự đoán    | Điểm thực tế | Đúng? |
-| --- | ----- | ----- | ---------- | ------------ | ----- |
-| 1   |       |       | cao / thấp |              |       |
-| 2   |       |       | cao / thấp |              |       |
-| 3   |       |       | cao / thấp |              |       |
-| 4   |       |       | cao / thấp |              |       |
-| 5   |       |       | cao / thấp |              |       |
+| Cặp | Câu A                                                 | Câu B                                                     | Dự đoán | Điểm thực tế | Đúng? |
+| --- | ----------------------------------------------------- | --------------------------------------------------------- | ------- | ------------ | ----- |
+| 1   | Con mèo đang ngủ ngon lành trên ghế sofa.             | Chú mèo cưng nhắm mắt nằm nghỉ trên chiếc ghế dài.        | cao     | 0.302        | Khá   |
+| 2   | Công nghệ AI đang phát triển mạnh mẽ.                 | Bà ngoại tôi rất thích nấu ăn.                            | thấp    | 0.000        | Đúng  |
+| 3   | Đại học Bách Khoa Hà Nội là trường kỹ thuật hàng đầu. | HUST là một trong những trường đại học kỹ thuật tốt nhất. | cao     | 0.500        | Đúng  |
+| 4   | Tôi muốn đăng ký vào ký túc xá năm nay.               | Làm sao để xin một suất ở khu nội trú sinh viên?          | cao     | 0.000        | Sai   |
+| 5   | Hôm nay trời mưa to quá.                              | Lịch học ngày mai bắt đầu từ 7h sáng.                     | thấp    | 0.136        | Đúng  |
 
 **Kết quả nào bất ngờ nhất? Điều này nói gì về cách embeddings biểu diễn ý nghĩa?**
 
-> *Viết 2-3 câu:*
+> Bất ngờ nhất là cặp số 4 có điểm tương đồng bằng 0.0 mặc dù ý nghĩa của hai câu gần như tương đương nhau. Nguyên nhân là do LexicalHashEmbedder trong bài test (dựa trên tần suất từ vựng) không hiểu được ngữ nghĩa (semantic) mà chỉ so khớp mặt chữ. Từ đó cho thấy các mô hình nhúng (embedding models) thực thụ (như OpenAI/Gemini) rất cần thiết vì chúng ánh xạ ý nghĩa câu vào vector thay vì chỉ mã hóa từng từ riêng lẻ.
 
 ---
 
@@ -123,19 +123,19 @@ tests/test_solution.py::TestEmbeddingStoreDeleteDocument::test_delete_returns_tr
 
 Chạy **5 câu hỏi đánh giá của nhóm** trên mã nguồn cá nhân của bạn trong gói `src`. **5 câu hỏi này phải trùng với các thành viên cùng nhóm** (xem `REPORT_NHOM.md`).
 
-| # | Câu hỏi (Query) | Top-1 Chunk truy xuất được (tóm tắt) | Điểm Score | Có liên quan không? (Relevant) | Câu trả lời của Agent (tóm tắt) |
-| - | --------------- | ------------------------------------ | ---------- | ------------------------------ | ------------------------------- |
-| 1 |                 |                                      |            |                                |                                 |
-| 2 |                 |                                      |            |                                |                                 |
-| 3 |                 |                                      |            |                                |                                 |
-| 4 |                 |                                      |            |                                |                                 |
-| 5 |                 |                                      |            |                                |                                 |
+| # | Câu hỏi (Query)                                                          | Top-1 Chunk truy xuất được (tóm tắt)                                                                         | Điểm Score | Có liên quan không? (Relevant)                                      | Câu trả lời của Agent (tóm tắt)                                                                                                             |
+| - | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ---------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1 | Ký túc xá Đại học Bách khoa Hà Nội có bao nhiêu dãy nhà...               | (0.503) hust-dormitory-overview chunk=0: Ký túc xá sinh viên Bách Khoa được giới thiệu...                    | 0.503      | Có (Một phần, câu trả lời chính xác nằm ở chunk=1)                  | Dựa vào ngữ cảnh (chunk 1), Ký túc xá Bách Khoa có 10 dãy nhà, 435 phòng ở và đón khoảng 4.200 sinh viên.                                   |
+| 2 | Cơ sở vật chất và lệ phí nhà X1, nhà X2 cho tân sinh viên K71...         | (0.346) hust-dormitory-overview chunk=1: Cơ sở vật chất - Ký túc xá gồm 10 dãy nhà...                        | 0.346      | Không (Top 1 là của HUST, nhưng Top 2 chứa thông tin đúng của HUCE) | Theo thông tin từ HUCE, Nhà X1: 2.700.000 đồng/kỳ; Nhà X2: 3.950.000 đồng/kỳ (đã bao gồm tiền cọc).                                         |
+| 3 | PTIT bố trí bao nhiêu chỗ ở tại KTX B1, B2 và cơ sở Ngọc Trục...         | (0.430) dorm-slot chunk=0: Bố trí chỗ ở nội trú cho sinh viên khóa 2025 PTIT tại Hà Nội...                   | 0.430      | Có (Thông tin chi tiết ở chunk=1)                                   | PTIT bố trí KTX B1 có 40 chỗ, KTX B2 có 460 chỗ, và cơ sở Ngọc Trục có 340 chỗ.                                                             |
+| 4 | Sinh viên ĐH Thương mại đăng ký ở KTX cơ sở Hà Nội theo quy trình nào... | (0.706) tmu-dormitory-registration-hanoi chunk=0: Cách thức đăng ký ở Ký túc xá cơ sở Hà Nội...              | 0.706      | Có                                                                  | Sinh viên truy cập biểu mẫu Google Forms từ 25/08 đến 30/08/2023, xem ưu tiên và đăng ký. Sinh viên đủ điều kiện sẽ nhận tin nhắn xác nhận. |
+| 5 | Mức giá điện nước tại khu nội trú được ban hành ngày nào...              | (0.546) tmu-dormitory-electric-water-fees chunk=0: Điều chỉnh mức giá điện nước tại Khu nội trú sinh viên... | 0.546      | Có                                                                  | Văn bản điều chỉnh được ban hành ngày 05/08/2024, đính kèm file dieu-chinh-gia-dien-nuoc-kntpdf-1727328575.pdf.                             |
 
-**Bao nhiêu câu hỏi trả về chunk có liên quan trong top-3?** \_\_ / 5
+**Bao nhiêu câu hỏi trả về chunk có liên quan trong top-3?** 5 / 5
 
 **Điều hay nhất tôi học được từ thành viên khác / nhóm khác (qua demo):**
 
-> *Viết 2-3 câu:*
+> Mình nhận ra rằng kích thước chunk (chunk\_size) ảnh hưởng rất lớn đến độ nhiễu khi search. Nếu chunk quá dài, nó sẽ bao hàm quá nhiều thông tin không cần thiết khiến thuật toán tìm kiếm bị loãng (chẳng hạn như việc chunk của HUST lại lọt top ở câu hỏi về HUCE do có trùng nhiều từ vựng chung). Đồng thời, việc gán thêm metadata filter giúp loại bỏ hẳn các document không liên quan từ sớm, cải thiện độ chính xác rõ rệt.
 
 ---
 
@@ -143,9 +143,9 @@ Chạy **5 câu hỏi đánh giá của nhóm** trên mã nguồn cá nhân củ
 
 | Tiêu chí                                        | Điểm tự đánh giá |
 | ----------------------------------------------- | ---------------- |
-| Khởi động (Warm-up)                             | / 5              |
-| Hướng tiếp cận của tôi (My Approach)            | / 10             |
-| Hoàn thiện code (Core Implementation — tests)   | / 30             |
-| Dự đoán độ tương tự (Similarity Predictions)    | / 5              |
-| Kết quả truy xuất của tôi (Competition Results) | / 10             |
-| **Tổng phần cá nhân**                           | **/ 60**         |
+| Khởi động (Warm-up)                             | 5 / 5              |
+| Hướng tiếp cận của tôi (My Approach)            | 10 / 10             |
+| Hoàn thiện code (Core Implementation — tests)   | 30 / 30             |
+| Dự đoán độ tương tự (Similarity Predictions)    | 5 / 5              |
+| Kết quả truy xuất của tôi (Competition Results) | 10 / 10             |
+| **Tổng phần cá nhân**                           | **60 / 60**         |

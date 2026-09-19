@@ -1,0 +1,80 @@
+=== Baseline Analysis (frontmatter stripped) ===
+
+dorm-charge.md
+- fixed_size: count=2, avg_length=280.5
+- by_sentences: count=3, avg_length=168.3
+- recursive: count=3, avg_length=169.0
+
+dorm-registration.md
+- fixed_size: count=13, avg_length=290.0
+- by_sentences: count=22, avg_length=142.0
+- recursive: count=14, avg_length=224.8
+
+dorm-slot.md
+- fixed_size: count=14, avg_length=296.1
+- by_sentences: count=20, avg_length=172.8
+- recursive: count=18, avg_length=192.5
+
+=== Retrieval Benchmark ===
+Chunker: HeadingChunker
+Loaded chunks: 25
+
+Q1: Ký túc xá Đại học Bách khoa Hà Nội có bao nhiêu dãy nhà, bao nhiêu phòng và có thể đón nhận khoảng bao nhiêu sinh viên?
+Filter: None
+Gold doc: hust-dormitory-overview
+Gold answer: Ký túc xá Bách Khoa có 10 dãy nhà, 435 phòng ở và có thể đón nhận khoảng 4.200 sinh viên.
+Top-3:
+  1. score=0.503 doc_id=hust-dormitory-overview chunk=0
+     # Ký túc xá Đại học Bách khoa Hà Nội Trường Đại học Bách khoa Hà Nội quan tâm đến đời sống sinh viên nội trú. Ký túc xá sinh viên Bách Khoa được giới thiệu là khu ký túc xá được đầ
+  2. score=0.488 doc_id=hust-dormitory-overview chunk=1
+     ## Cơ sở vật chất - Ký túc xá gồm 10 dãy nhà. - Có 8 dãy nhà cao 4-5 tầng và 2 dãy nhà 1 tầng. - Tổng cộng có 435 phòng ở. - Mỗi phòng bố trí 8-12 người. - Ký túc xá có thể đón nhậ
+  3. score=0.449 doc_id=tmu-dormitory-registration-hanoi chunk=0
+     # Cách thức đăng ký ở Ký túc xá cơ sở Hà Nội Ban Quản lý Sinh viên Nội trú và Y tế Trường Đại học Thương mại thông báo cách thức đăng ký ở ký túc xá cơ sở Hà Nội. Thông tin chính: 
+
+Q2: Cơ sở vật chất và lệ phí nhà X1, nhà X2 cho tân sinh viên K71 của HUCE là gì?
+Filter: {'audience': 'student'}
+Gold doc: dorm-registration
+Gold answer: Nhà X1: 500.000 đồng x 5 tháng + 200.000 đồng tiền cọc = 2.700.000 đồng. Nhà X2: 750.000 đồng x 5 tháng + 200.000 đồng tiền cọc = 3.950.000 đồng.
+Top-3:
+  1. score=0.346 doc_id=hust-dormitory-overview chunk=1
+     ## Cơ sở vật chất - Ký túc xá gồm 10 dãy nhà. - Có 8 dãy nhà cao 4-5 tầng và 2 dãy nhà 1 tầng. - Tổng cộng có 435 phòng ở. - Mỗi phòng bố trí 8-12 người. - Ký túc xá có thể đón nhậ
+  2. score=0.335 doc_id=dorm-registration chunk=1
+     ## Cơ sở vật chất và lệ phí Nhà X1: - Không có điều hòa và bình nước nóng. - Lệ phí: 500.000 đồng x 5 tháng + 200.000 đồng tiền cọc = 2.700.000 đồng. Nhà X2: - Có điều hòa và bình 
+  3. score=0.315 doc_id=tmu-dormitory-registration-hanoi chunk=2
+     ## Đối tượng ưu tiên Các đối tượng được xem xét theo thứ tự ưu tiên: 1. Anh hùng lực lượng vũ trang nhân dân, anh hùng lao động, thương binh, bệnh binh, người hưởng chính sách như 
+
+Q3: PTIT bố trí bao nhiêu chỗ ở tại KTX B1, B2 và cơ sở Ngọc Trục cho sinh viên khóa 2025?
+Filter: {'audience': 'student'}
+Gold doc: dorm-slot
+Gold answer: KTX B1 có 40 chỗ, KTX B2 có 460 chỗ, KTX Cơ sở Đào tạo Ngọc Trục có 340 chỗ.
+Top-3:
+  1. score=0.430 doc_id=dorm-slot chunk=0
+     # Bố trí chỗ ở nội trú cho sinh viên khóa 2025 PTIT tại Hà Nội Học viện Công nghệ Bưu chính Viễn thông thông báo việc bố trí sinh viên khóa 2025 ở nội trú tại các ký túc xá của Học
+  2. score=0.402 doc_id=dorm-slot chunk=1
+     ## Địa điểm, cơ sở vật chất và số chỗ Ký túc xá B1, Cơ sở Đào tạo Hà Đông: - Số chỗ ở: 40 chỗ. - Phòng 04 người, có khu vệ sinh khép kín, giường, ga đệm, tủ, bàn ghế, quạt, điều hò
+  3. score=0.344 doc_id=dorm-slot chunk=4
+     ## Nguyên tắc bố trí nội trú - Xét bố trí trước cho sinh viên thuộc diện ưu tiên sau khi nộp hồ sơ. - Sau khi xét hết đối tượng ưu tiên, số chỗ còn lại được phân bổ theo tỷ lệ chun
+
+Q4: Sinh viên Đại học Thương mại đăng ký ở Ký túc xá cơ sở Hà Nội theo quy trình nào và thời hạn đăng ký là khi nào?
+Filter: {'audience': 'student'}
+Gold doc: tmu-dormitory-registration-hanoi
+Gold answer: Thời hạn đăng ký từ 25/08/2023 đến 30/08/2023. Sinh viên truy cập biểu mẫu Google Forms, xem đúng đối tượng ưu tiên và đăng ký theo hướng dẫn; sinh viên đủ điều kiện sẽ nhận tin nhắn xác nhận qua số điện thoại đã đăng ký.
+Top-3:
+  1. score=0.706 doc_id=tmu-dormitory-registration-hanoi chunk=0
+     # Cách thức đăng ký ở Ký túc xá cơ sở Hà Nội Ban Quản lý Sinh viên Nội trú và Y tế Trường Đại học Thương mại thông báo cách thức đăng ký ở ký túc xá cơ sở Hà Nội. Thông tin chính: 
+  2. score=0.607 doc_id=tmu-dormitory-registration-hanoi chunk=1
+     ## Quy trình đăng ký 1. Truy cập biểu mẫu đăng ký: https://forms.gle/wVabuZytjPX9k6BB9. 2. Xem xét đúng đối tượng ưu tiên và đăng ký theo hướng dẫn. 3. Sinh viên đủ điều kiện được 
+  3. score=0.591 doc_id=dorm-slot chunk=6
+     ## Quy trình đăng ký 1. Sau khi hoàn thành thủ tục nhập học, sinh viên có nguyện vọng đăng ký ở nội trú liên hệ bàn trực đăng ký ở nội trú hoặc Tổ Quản lý Ký túc xá, Trung tâm Dịch
+
+Q5: Mức giá điện nước tại khu nội trú được ban hành ngày nào và file đính kèm tên gì?
+Filter: {'audience': 'student'}
+Gold doc: tmu-dormitory-electric-water-fees
+Gold answer: Văn bản điều chỉnh mức giá điện, nước tại Khu nội trú sinh viên có ngày ban hành 05/08/2024 và file đính kèm là dieu-chinh-gia-dien-nuoc-kntpdf-1727328575.pdf.
+Top-3:
+  1. score=0.546 doc_id=tmu-dormitory-electric-water-fees chunk=0
+     # Điều chỉnh mức giá điện nước tại Khu nội trú sinh viên Ban Quản lý Sinh viên Nội trú và Y tế Trường Đại học Thương mại công bố văn bản điều chỉnh mức giá điện, nước tại Khu nội t
+  2. score=0.282 doc_id=dorm-registration chunk=4
+     ## Quy trình đăng ký trực tuyến 1. Sinh viên truy cập hệ thống nhập học trực tuyến, hoàn tất bước 1 đến bước 8, sau đó chọn bước 9 để đăng ký nội trú. 2. Sinh viên tải lên hình ảnh
+  3. score=0.276 doc_id=dorm-charge chunk=0
+     # Mức thu ký túc xá PTIT cơ sở miền Bắc năm 2024-2025 Học viện Công nghệ Bưu chính Viễn thông thông báo Quyết định ban hành mức thu ký túc xá tại cơ sở miền Bắc năm 2024-2025. Thôn
